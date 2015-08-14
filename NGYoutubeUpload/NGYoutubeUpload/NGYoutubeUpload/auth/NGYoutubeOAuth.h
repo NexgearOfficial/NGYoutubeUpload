@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "NGOauthViewController.h"
 
-typedef void (^YouTubeCompletelion)(BOOL success, NSString *youTubeToken, NSString *youTubeRefreshToken);
+typedef void (^YouTubeCompletion)(BOOL success, NSString *youTubeToken, NSString *youTubeRefreshToken);
 
-@interface NGYoutubeOAuth : NSObject
+@interface NGYoutubeOAuth : NSObject <NSURLConnectionDelegate>
 
-@property(copy, nonatomic)YouTubeCompletelion completelion;
+@property(copy, nonatomic)YouTubeCompletion completion;
 
 - (void)authenticateWithYouTubeUsingYouTubeClientID:(NSString*)youTubeClientID
                                 youTubeClientSecret:(NSString*)youTubeClientSecret
@@ -24,4 +24,8 @@ typedef void (^YouTubeCompletelion)(BOOL success, NSString *youTubeToken, NSStri
                                          accessType:(NSString*)youTubeAccessType
                                      viewController:(id)viewController
                                                    :(void (^)(BOOL success, NSString *youTubeToken, NSString *youTubeRefreshToken))completelion;
+
+-(void) getNewAccessToken;
+
+- (void)uploadYoutubeVideoDetails;
 @end

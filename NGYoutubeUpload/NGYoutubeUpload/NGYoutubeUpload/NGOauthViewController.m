@@ -66,7 +66,7 @@ static NSString *youTubeTokenURL = @"https://accounts.google.com/o/oauth2/token"
             NSLog(@" json %@",json);
             if (token && refreshToken) {
                 NGYoutubeOAuth *youTubeOAuth = (NGYoutubeOAuth*)self.youTubeSender;
-                youTubeOAuth.completelion(YES, token, refreshToken);
+                youTubeOAuth.completion(YES, token, refreshToken);
                 [self dismissViewControllerAnimated:YES completion:nil];
                 
             }else{

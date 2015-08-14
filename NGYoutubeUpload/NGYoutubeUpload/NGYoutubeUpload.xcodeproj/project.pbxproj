@@ -48,6 +48,7 @@
 		18510F821B7CACD200D54C55 /* NGOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGOauthViewController.h; sourceTree = "<group>"; };
 		18510F831B7CACD200D54C55 /* NGOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGOauthViewController.m; sourceTree = "<group>"; };
 		18510F851B7CB55000D54C55 /* YouTube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouTube.png; sourceTree = "<group>"; };
+		186BD5471B7E1053000C2FF5 /* instagram03140.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = instagram03140.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +96,7 @@
 				18510F611B7C847700D54C55 /* ViewController.m */,
 				18510F851B7CB55000D54C55 /* YouTube.png */,
 				18510F631B7C847700D54C55 /* Main.storyboard */,
+				186BD5471B7E1053000C2FF5 /* instagram03140.mp4 */,
 				18510F661B7C847700D54C55 /* Images.xcassets */,
 				18510F681B7C847700D54C55 /* LaunchScreen.xib */,
 				18510F591B7C847700D54C55 /* Supporting Files */,
@@ -434,6 +436,7 @@
 				18510F7B1B7C847700D54C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18510F7C1B7C847700D54C55 /* Build configuration list for PBXNativeTarget "NGYoutubeUploadTests" */ = {
 			isa = XCConfigurationList;
@@ -442,6 +445,7 @@
 				18510F7E1B7C847700D54C55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
