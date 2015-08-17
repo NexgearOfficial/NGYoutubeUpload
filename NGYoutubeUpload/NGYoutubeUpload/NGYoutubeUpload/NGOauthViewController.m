@@ -13,7 +13,6 @@ static NSString *youTubeTokenURL = @"https://accounts.google.com/o/oauth2/token"
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     [self.navigationController.navigationBar setTranslucent:NO];
     
@@ -35,13 +34,12 @@ static NSString *youTubeTokenURL = @"https://accounts.google.com/o/oauth2/token"
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     NSString *pageTitle = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    
     if([pageTitle containsString:@"code="]){
         NSArray *codeArray = [pageTitle componentsSeparatedByString:@"code="];
         
         NSString *code = [codeArray lastObject];
         
-        NSString *post = [NSString stringWithFormat:@"code=%@&client_id=%@&client_secret=%@&redirect_uri=%@&grant_type=authorization_code", code, self.youtubeClientID, self.youtubeClientSecret, self.uriCallBack];
+        NSString *post = [NSString stringWithFormat:@"code=%@&client_id=%@&client_secret=%@&redirect_uri=%@&grant_type=authorization_code", code,self.ngYoutubeAuth.youtubeClientID, self.ngYoutubeAuth.youtubeClientSecret, self.ngYoutubeAuth.uriCallBack];
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
@@ -59,20 +57,18 @@ static NSString *youTubeTokenURL = @"https://accounts.google.com/o/oauth2/token"
             NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             NSData *jsonData = [responseString dataUsingEncoding:NSUTF8StringEncoding];
             id json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
-            
             NSString *token = [json objectForKey:@"access_token"];
             NSString *refreshToken = [json objectForKey:@"refresh_token"];
-            NSLog(@"token :: %@",token);
-            NSLog(@" json %@",json);
             if (token && refreshToken) {
-                NGYoutubeOAuth *youTubeOAuth = (NGYoutubeOAuth*)self.youTubeSender;
-                youTubeOAuth.completion(YES, token, refreshToken);
+                self.ngYoutubeAuth.completion(YES, token, refreshToken);
                 [self dismissViewControllerAnimated:YES completion:nil];
                 
             }else{
                 NSLog(@"Error");
             }
         }];
+    } else {
+        
     }
 }
 

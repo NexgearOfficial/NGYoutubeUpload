@@ -6,21 +6,16 @@
 //  Copyright (c) 2015 Apple. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "NGYoutubeOAuth.h"
+@class NGYoutubeOAuth;
 
-@interface NGOauthViewController : UIViewController<UIWebViewDelegate>
-
-@property (nonatomic, strong)id youTubeSender;
+@interface NGOauthViewController : UIViewController<UIWebViewDelegate>{
+}
+@property (nonatomic, strong)NGYoutubeOAuth *ngYoutubeAuth;
 
 @property (nonatomic, strong)UIWebView *ngoAuthViewWebView;
 
-@property (nonatomic, strong)NSString *youtubeClientID;
-
-@property (nonatomic, strong)NSString *youtubeClientSecret;
-
-@property (nonatomic, strong)NSString *uriCallBack;
-
-@property (nonatomic, strong)NSString *state;
 
 @end

@@ -17,6 +17,8 @@
 		18510F811B7CA85C00D54C55 /* NGYoutubeOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 18510F801B7CA85C00D54C55 /* NGYoutubeOAuth.m */; };
 		18510F841B7CACD200D54C55 /* NGOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18510F831B7CACD200D54C55 /* NGOauthViewController.m */; };
 		18510F861B7CB55000D54C55 /* YouTube.png in Resources */ = {isa = PBXBuildFile; fileRef = 18510F851B7CB55000D54C55 /* YouTube.png */; };
+		185D74CD1B81F474002788FC /* instagram03140.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 185D74CB1B81F474002788FC /* instagram03140.mp4 */; };
+		185D74CE1B81F474002788FC /* Sequence_02.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 185D74CC1B81F474002788FC /* Sequence_02.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,8 @@
 		18510F821B7CACD200D54C55 /* NGOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGOauthViewController.h; sourceTree = "<group>"; };
 		18510F831B7CACD200D54C55 /* NGOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGOauthViewController.m; sourceTree = "<group>"; };
 		18510F851B7CB55000D54C55 /* YouTube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YouTube.png; sourceTree = "<group>"; };
-		186BD5471B7E1053000C2FF5 /* instagram03140.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = instagram03140.mp4; sourceTree = "<group>"; };
+		185D74CB1B81F474002788FC /* instagram03140.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = instagram03140.mp4; sourceTree = "<group>"; };
+		185D74CC1B81F474002788FC /* Sequence_02.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sequence_02.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,13 +93,14 @@
 		18510F581B7C847700D54C55 /* NGYoutubeUpload */ = {
 			isa = PBXGroup;
 			children = (
+				185D74CB1B81F474002788FC /* instagram03140.mp4 */,
+				185D74CC1B81F474002788FC /* Sequence_02.mp4 */,
 				18510F5D1B7C847700D54C55 /* AppDelegate.h */,
 				18510F5E1B7C847700D54C55 /* AppDelegate.m */,
 				18510F601B7C847700D54C55 /* ViewController.h */,
 				18510F611B7C847700D54C55 /* ViewController.m */,
 				18510F851B7CB55000D54C55 /* YouTube.png */,
 				18510F631B7C847700D54C55 /* Main.storyboard */,
-				186BD5471B7E1053000C2FF5 /* instagram03140.mp4 */,
 				18510F661B7C847700D54C55 /* Images.xcassets */,
 				18510F681B7C847700D54C55 /* LaunchScreen.xib */,
 				18510F591B7C847700D54C55 /* Supporting Files */,
@@ -214,8 +218,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185D74CE1B81F474002788FC /* Sequence_02.mp4 in Resources */,
 				18510F651B7C847700D54C55 /* Main.storyboard in Resources */,
 				18510F6A1B7C847700D54C55 /* LaunchScreen.xib in Resources */,
+				185D74CD1B81F474002788FC /* instagram03140.mp4 in Resources */,
 				18510F671B7C847700D54C55 /* Images.xcassets in Resources */,
 				18510F861B7CB55000D54C55 /* YouTube.png in Resources */,
 			);

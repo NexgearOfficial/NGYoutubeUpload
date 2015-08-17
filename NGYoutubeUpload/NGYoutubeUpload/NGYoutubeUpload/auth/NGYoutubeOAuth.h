@@ -7,25 +7,33 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "NGOauthViewController.h"
 
 typedef void (^YouTubeCompletion)(BOOL success, NSString *youTubeToken, NSString *youTubeRefreshToken);
+
 
 @interface NGYoutubeOAuth : NSObject <NSURLConnectionDelegate>
 
 @property(copy, nonatomic)YouTubeCompletion completion;
 
-- (void)authenticateWithYouTubeUsingYouTubeClientID:(NSString*)youTubeClientID
-                                youTubeClientSecret:(NSString*)youTubeClientSecret
-                                       responseType:(NSString*)youTubeResponseType
-                                              scope:(NSString*)scope
-                                              state:(NSString*)state
-                                     appURLCallBack:(NSString*)appURLCallBack
-                                         accessType:(NSString*)youTubeAccessType
-                                     viewController:(id)viewController
-                                                   :(void (^)(BOOL success, NSString *youTubeToken, NSString *youTubeRefreshToken))completelion;
+@property (nonatomic, weak)NSString *youtubeClientID;
 
--(void) getNewAccessToken;
+@property (nonatomic, strong)NSString *youtubeClientSecret;
 
-- (void)uploadYoutubeVideoDetails;
+@property (nonatomic, strong)NSString *youtubepublicAPIKey;
+
+@property (nonatomic, strong)NSString *uriCallBack;
+
+@property (nonatomic, strong)NSString *state;
+
+@property (nonatomic, strong)NSString *scope;
+
+@property (nonatomic, strong)NSString *youTubeAccessType;
+
+
+- (id) initWithClientId:(NSString *)clientID clientSecret:(NSString *) clientSecret;
+
+- (void) uploadVideo:(NSData *) videoData;
+
 @end
